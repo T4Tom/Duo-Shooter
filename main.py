@@ -8,9 +8,9 @@ score = 0
 pointsfont = pygame.font.SysFont(None, 72)
 
 shipimg1 = pygame.image.load('Ship1.png')
-shipimg1 = pygame.transform.scale(shipimg1, (50, 80))
+shipimg1 = pygame.transform.scale(shipimg1, (100, 160))
 shipimg2 = pygame.image.load('Ship2.png')
-shipimg2 = pygame.transform.scale(shipimg2, (50, 80))
+shipimg2 = pygame.transform.scale(shipimg2, (100, 160))
 
 
 
