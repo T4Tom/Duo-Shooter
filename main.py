@@ -19,8 +19,8 @@ def game_loop():
   
   score = 0
   
-  shiplocation1 = [450, 500]
-  shiplocation2 = [250, 500]
+  shiplocation1 = [450, 400]
+  shiplocation2 = [250, 400]
   
   done = False
   while not done:
