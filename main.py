@@ -29,7 +29,7 @@ def game_loop():
     
     pointstext = pointsfont.render('Points: {0}'.format(score), True, (255, 255, 255))
     pointstextRect = pointstext.get_rect()
-    pointtextRect.center = (400, 50)
+    pointstextRect.center = (400, 50)
     
     
     
