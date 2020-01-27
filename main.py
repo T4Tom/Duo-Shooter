@@ -65,9 +65,9 @@ def game_loop():
     if pressed[pygame.K_LEFT]:
       shiplocation1[0] -= 3
       
-    if pressed[pygame.K_D]:
+    if pressed[pygame.K_d]:
       shiplocation2[0] += 3
-    if pressed[pygame.K_A]:
+    if pressed[pygame.K_a]:
       shiplocation2[0] -= 3
 
 
