@@ -55,19 +55,19 @@ def game_loop():
     for event in pygame.event.get():
       if event.type == pygame.QUIT:
         exit()
-      if event.type == pygame.K_ESCAPE:
+      if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
         exit()
         
         
     pressed = pygame.key.get_pressed()
-    if pressed[pygame.K_RIGHT]:
+    if pressed[pygame.K_RIGHT] and shiplocation1[0] + 100 <= 800:
       shiplocation1[0] += 3
-    if pressed[pygame.K_LEFT]:
+    if pressed[pygame.K_LEFT] and shiplocation2[0] >= 0:
       shiplocation1[0] -= 3
       
-    if pressed[pygame.K_d]:
+    if pressed[pygame.K_d] and shiplocation2[0] + 100 <= 800:
       shiplocation2[0] += 3
-    if pressed[pygame.K_a]:
+    if pressed[pygame.K_a] and shiplocation2[0] >= 0:
       shiplocation2[0] -= 3
 
 
