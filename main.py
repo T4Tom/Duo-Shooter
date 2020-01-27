@@ -57,6 +57,18 @@ def game_loop():
         exit()
       if event.type == pygame.K_ESCAPE:
         exit()
+        
+        
+    pressed = pygame.key.get_pressed()
+    if pressed[pygame.K_RIGHT]:
+      shiplocation1[0] += 3
+    if pressed[pygame.K_LEFT]:
+      shiplocation1[0] -= 3
+      
+    if pressed[pygame.K_D]:
+      shiplocation2[0] += 3
+    if pressed[pygame.K_A]:
+      shiplocation2[0] -= 3
 
 
     pygame.display.flip()
