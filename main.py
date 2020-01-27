@@ -57,6 +57,26 @@ def game_loop():
         exit()
       if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
         exit()
+      if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+        shot = True
+      
+      
+      
+      
+    if not shot:
+      laserx = shiplocation1[0] + 50
+      lasery = 480
+    
+        
+    if shot:
+      lasery -= 5
+      pygame.draw.rect(screen, (0, 255, 0), pygame.Rect(laserx, lasery, 5, 40))
+      if lasery < -100:
+        shot = False
+      
+        
+        
+        
         
         
     pressed = pygame.key.get_pressed()
