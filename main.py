@@ -62,7 +62,7 @@ def game_loop():
     pressed = pygame.key.get_pressed()
     if pressed[pygame.K_RIGHT] and shiplocation1[0] + 100 <= 800:
       shiplocation1[0] += 3
-    if pressed[pygame.K_LEFT] and shiplocation2[0] >= 0:
+    if pressed[pygame.K_LEFT] and shiplocation1[0] >= 0:
       shiplocation1[0] -= 3
       
     if pressed[pygame.K_d] and shiplocation2[0] + 100 <= 800:
