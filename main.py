@@ -62,7 +62,7 @@ def game_loop():
     if not shot:
       laserx = shiplocation1[0] + 48
       lasery = 480
-      laserx2 = shiplocation2[0] + 47
+      laserx2 = shiplocation2[0] + 48
       lasery2 = 480
     
         
