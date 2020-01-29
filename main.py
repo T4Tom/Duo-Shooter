@@ -66,14 +66,20 @@ def game_loop():
       
       
     if not shot:
-      laserx = shiplocation1[0] + 50
+      laserx = shiplocation1[0] + 40
       lasery = 480
+      laserx2 = shiplocation2[0] + 40
+      lasery2 = 480
     
         
     elif shot:
       lasery -= 5
-      pygame.draw.rect(screen, (0, 255, 0), pygame.Rect(laserx, lasery, 5, 40))
+      pygame.draw.rect(screen, (150, 0, 0), pygame.Rect(laserx, lasery, 5, 40))
       if lasery < -100:
+        shot = False
+      lasery2 -= 5
+      pygame.draw.rect(screen, (178, 102, 255), pygame.Rect(laserx2, lasery2, 5, 40))
+      if lasery2 < -100:
         shot = False
       
         
@@ -97,3 +103,7 @@ def game_loop():
     clock.tick(70)
 
 game_loop()
+
+
+# Ship 1 = red, right
+# Ship 2 = purple, left
