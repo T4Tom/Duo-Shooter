@@ -4,6 +4,7 @@ screen = pygame.display.set_mode((800, 600))
 clock = pygame.time.Clock()
 
 score = 0
+shot = False
 
 pointsfont = pygame.font.SysFont(None, 72)
 
@@ -22,6 +23,7 @@ mineimg2 = pygame.transform.scale(mineimg2, (50, 50))
 def game_loop():
   
   score = 0
+  shot = False
   
   shiplocation1 = [450, 400]
   shiplocation2 = [250, 400]
@@ -68,7 +70,7 @@ def game_loop():
       lasery = 480
     
         
-    if shot:
+    elif shot:
       lasery -= 5
       pygame.draw.rect(screen, (0, 255, 0), pygame.Rect(laserx, lasery, 5, 40))
       if lasery < -100:
