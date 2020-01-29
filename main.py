@@ -46,12 +46,6 @@ def game_loop():
     pointstextRect.center = (400, 50)
     
     
-    screen.blit(mineimg1, minelocation1)
-    screen.blit(mineimg2, minelocation2)
-    screen.blit(shipimg1, shiplocation1)
-    screen.blit(shipimg2, shiplocation2)
-    
-    
     
     
     for event in pygame.event.get():
@@ -66,9 +60,9 @@ def game_loop():
       
       
     if not shot:
-      laserx = shiplocation1[0] + 40
+      laserx = shiplocation1[0] + 45
       lasery = 480
-      laserx2 = shiplocation2[0] + 40
+      laserx2 = shiplocation2[0] + 45
       lasery2 = 480
     
         
@@ -98,6 +92,13 @@ def game_loop():
     if pressed[pygame.K_a] and shiplocation2[0] >= 0:
       shiplocation2[0] -= 3
 
+    screen.blit(mineimg1, minelocation1)
+    screen.blit(mineimg2, minelocation2)
+    screen.blit(shipimg1, shiplocation1)
+    screen.blit(shipimg2, shiplocation2)
+      
+      
+      
 
     pygame.display.flip()
     clock.tick(70)
