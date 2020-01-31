@@ -36,6 +36,17 @@ def game_loop():
   minelocation1 = [mine1x, mine1y]
   minelocation2 = [mine2x, mine2y]
   
+  
+  ship1_rect = pygame.Rect(shiplocation1[0], shiplocation1[1], shipimg1.get_width(), shipimg1.get_height())
+  ship2_rect = pygame.Rect(shiplocation2[0], shiplocation2[1], shipimg2.get_width(), shipimg2.get_height())
+  mine1_rect = pygame.Rect(minelocation1[0], minelocation1[1], mineimg1.get_width(), mineimg1.get_height())
+  mine2_rect = pygame.Rect(minelocation2[0], minelocation2[1], mineimg2.get_width(), mineimg2.get_height())
+  
+  laser1_rect = pygame.Rect(laserx, lasery, 5, 40)
+  laser2_rect = pygame.Rect(laserx2, lasery2, 5, 40)
+  
+  
+  
   done = False
   while not done:
     
@@ -56,6 +67,8 @@ def game_loop():
       if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
         shot = True
       
+    if laser1_rect.colliderect(mine1_rect):
+      print('hit)
       
       
       
