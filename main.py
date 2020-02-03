@@ -42,13 +42,6 @@ def game_loop():
   minelocation2 = [mine2x, mine2y]
   
   
-  ship1_rect = pygame.Rect(shiplocation1[0], shiplocation1[1], shipimg1.get_width(), shipimg1.get_height())
-  ship2_rect = pygame.Rect(shiplocation2[0], shiplocation2[1], shipimg2.get_width(), shipimg2.get_height())
-  mine1_rect = pygame.Rect(minelocation1[0], minelocation1[1], minelocation1[0] + mineimg1.get_width(), minelocation1[1] + mineimg1.get_height())
-  mine2_rect = pygame.Rect(minelocation2[0], minelocation2[1], minelocation2[0] + mineimg2.get_width(), minelocation2[1] + mineimg2.get_height())
-  
-  laser1_rect = pygame.Rect(laserx, lasery, laserx + 5, lasery + 40)
-  laser2_rect = pygame.Rect(laserx2, lasery2, laserx2 + 5, lasery2 + 40)
   
   
   
@@ -61,7 +54,13 @@ def game_loop():
     pointstextRect = pointstext.get_rect()
     pointstextRect.center = (400, 50)
     
-    
+    ship1_rect = pygame.Rect(shiplocation1[0], shiplocation1[1], shipimg1.get_width(), shipimg1.get_height())
+    ship2_rect = pygame.Rect(shiplocation2[0], shiplocation2[1], shipimg2.get_width(), shipimg2.get_height())
+    mine1_rect = pygame.Rect(minelocation1[0], minelocation1[1], mineimg1.get_width(), mineimg1.get_height())
+    mine2_rect = pygame.Rect(minelocation2[0], minelocation2[1], mineimg2.get_width(), mineimg2.get_height())
+
+    laser1_rect = pygame.Rect(laserx, lasery, 5, 40)
+    laser2_rect = pygame.Rect(laserx2, lasery2, 5, 40)    
     
     
     for event in pygame.event.get():
