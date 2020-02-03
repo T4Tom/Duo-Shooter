@@ -71,9 +71,13 @@ def game_loop():
         exit()
       if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
         shot = True
+        
+        
       
     if laser1_rect.colliderect(mine1_rect):
       print('hit')
+    if laser2_rect.colliderect(mine2_rect):
+      print('hit2')
       
       
       
