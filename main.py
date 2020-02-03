@@ -28,6 +28,11 @@ def game_loop():
   shiplocation1 = [450, 400]
   shiplocation2 = [250, 400]
   
+  laserx = shiplocation1[0] + 48
+  lasery = 480
+  laserx2 = shiplocation2[0] + 48
+  lasery2 = 480
+  
   mine1y = random.randint(0, 300)
   mine1x = random.randint(0, 750)
   mine2y = random.randint(0, 300)
