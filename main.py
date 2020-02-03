@@ -68,7 +68,7 @@ def game_loop():
         shot = True
       
     if laser1_rect.colliderect(mine1_rect):
-      print('hit)
+      print('hit')
       
       
       
