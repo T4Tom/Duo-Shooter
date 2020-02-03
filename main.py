@@ -3,6 +3,8 @@ pygame.init()
 screen = pygame.display.set_mode((800, 600))
 clock = pygame.time.Clock()
 
+print('test')
+
 score = 0
 shot = False
 
