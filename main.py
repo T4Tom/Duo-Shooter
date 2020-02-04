@@ -24,6 +24,8 @@ def game_loop():
   
   score = 0
   shot = False
+  hit1 = False
+  hit2 = False
   
   shiplocation1 = [450, 400]
   shiplocation2 = [250, 400]
@@ -53,6 +55,7 @@ def game_loop():
     pointstext = pointsfont.render('Points: {0}'.format(score), True, (255, 255, 255))
     pointstextRect = pointstext.get_rect()
     pointstextRect.center = (400, 50)
+    screen.blit(pointstext, pointstextRect)
     
     ship1_rect = pygame.Rect(shiplocation1[0], shiplocation1[1], shipimg1.get_width(), shipimg1.get_height())
     ship2_rect = pygame.Rect(shiplocation2[0], shiplocation2[1], shipimg2.get_width(), shipimg2.get_height())
@@ -74,8 +77,15 @@ def game_loop():
         
       
     if laser1_rect.colliderect(mine1_rect):
-      pass
+      hit1 = True
     if laser2_rect.colliderect(mine2_rect):
+      hit2 = True
+      
+      
+      
+      
+      
+    if hit1 and hit2:
       pass
       
       
