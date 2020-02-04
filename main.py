@@ -74,9 +74,9 @@ def game_loop():
         
       
     if laser1_rect.colliderect(mine1_rect):
-      print('hit')
+      pass
     if laser2_rect.colliderect(mine2_rect):
-      print('hit2')
+      pass
       
       
       
