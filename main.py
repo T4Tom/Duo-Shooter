@@ -82,7 +82,11 @@ def game_loop():
       hit2 = True
       
       
-      
+    
+    if hit1:
+      pass
+    if hit2:
+      pass
       
       
     if hit1 and hit2:
