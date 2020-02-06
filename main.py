@@ -88,9 +88,9 @@ def game_loop():
       
     
     if hit1:
-      pass
+      shot1 = False
     if hit2:
-      pass
+      shot2 = False
       
       
     if hit1 and hit2:
