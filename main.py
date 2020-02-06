@@ -113,7 +113,7 @@ def game_loop():
       lasery2 = 480
 
     
-    elif shot2
+    elif shot2:
       lasery2 -= 5
       pygame.draw.rect(screen, (178, 102, 255), pygame.Rect(laserx2, lasery2, 5, 40))
       if lasery2 < -100:
