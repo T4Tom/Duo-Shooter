@@ -4,7 +4,8 @@ screen = pygame.display.set_mode((800, 600))
 clock = pygame.time.Clock()
 
 score = 0
-shot = False
+shot1 = False
+shot2 = False
 
 pointsfont = pygame.font.SysFont(None, 72)
 
@@ -24,7 +25,8 @@ explosionimg = pygame.image.load('explosion.png')
 def game_loop():
   
   score = 0
-  shot = False
+  shot1 = False
+  shot2 = False
   hit1 = False
   hit2 = False
   
@@ -73,7 +75,8 @@ def game_loop():
       if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
         exit()
       if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
-        shot = True
+        shot1 = True
+        shot2 = True
         
         
       
@@ -95,23 +98,26 @@ def game_loop():
       
       
       
-    if not shot:
+    if not shot1:
       laserx = shiplocation1[0] + 48
       lasery = 480
-      laserx2 = shiplocation2[0] + 48
-      lasery2 = 480
-    
         
-    elif shot:
+    elif shot1:
       lasery -= 5
       pygame.draw.rect(screen, (150, 0, 0), pygame.Rect(laserx, lasery, 5, 40))
       if lasery < -100:
-        shot = False
+        shot1 = False
+    
+    if not shot2:
+      laserx2 = shiplocation2[0] + 48
+      lasery2 = 480
+
+    
+    elif shot1
       lasery2 -= 5
       pygame.draw.rect(screen, (178, 102, 255), pygame.Rect(laserx2, lasery2, 5, 40))
       if lasery2 < -100:
-        shot = False
-      
+        shot2 = False      
       
         
         
