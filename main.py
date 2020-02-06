@@ -89,15 +89,9 @@ def game_loop():
     
     if hit1:
       shot1 = False
-    elif not hit1:
-      laserx = shiplocation1[0] + 48
-      lasery = 480
     
     if hit2:
       shot2 = False
-    elif not hit2:
-      laserx2 = shiplocation2[0] + 48
-      lasery2 = 480      
       
       
     if hit1 and hit2:
