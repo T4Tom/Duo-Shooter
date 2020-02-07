@@ -121,8 +121,7 @@ def game_loop():
       
       
     if hit1 and hit2:
-      score += 1
-      game_loop()
+      pass
       
       
       
