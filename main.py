@@ -7,6 +7,14 @@ score = 0
 shot1 = False
 shot2 = False
 
+mine1y = random.randint(0, 300)
+mine1x = random.randint(0, 750)
+mine2y = random.randint(0, 300)
+mine2x = random.randint(0, 750)
+
+minelocation1 = [mine1x, mine1y]
+minelocation2 = [mine2x, mine2y]
+
 pointsfont = pygame.font.SysFont(None, 72)
 
 shipimg1 = pygame.image.load('Ship1.png')
