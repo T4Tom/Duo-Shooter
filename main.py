@@ -92,7 +92,9 @@ def game_loop():
     if laser2_rect.colliderect(mine2_rect):
       hit2 = True
       
-      
+
+    screen.blit(mineimg1, minelocation1)
+    screen.blit(mineimg2, minelocation2)      
     
     if hit1:
       shot1 = False
@@ -145,8 +147,6 @@ def game_loop():
     if pressed[pygame.K_a] and shiplocation2[0] >= 0:
       shiplocation2[0] -= 3
 
-    screen.blit(mineimg1, minelocation1)
-    screen.blit(mineimg2, minelocation2)
     screen.blit(shipimg1, shiplocation1)
     screen.blit(shipimg2, shiplocation2)
       
