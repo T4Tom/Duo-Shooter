@@ -7,14 +7,13 @@ score = 0
 shot1 = False
 shot2 = False
 
-pointstext = pointsfont.render('Points: {0}'.format(score), True, (255, 255, 255))
-pointstextRect = pointstext.get_rect()
-pointstextRect.center = (400, 50)
-
 shiplocation1 = [450, 400]
 shiplocation2 = [250, 400]
 
 pointsfont = pygame.font.SysFont(None, 72)
+pointstext = pointsfont.render('Points: {0}'.format(score), True, (255, 255, 255))
+pointstextRect = pointstext.get_rect()
+pointstextRect.center = (400, 50)
 
 deathfont = pygame.font.SysFont(None, 100)
 deathtext = deathfont.render('GAME OVER', True, (255, 0, 0))
