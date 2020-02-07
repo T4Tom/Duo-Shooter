@@ -47,7 +47,6 @@ def game_over():
 
 def game_loop():
   
-  score = 0
   shot1 = False
   shot2 = False
   hit1 = False
@@ -122,7 +121,8 @@ def game_loop():
       
       
     if hit1 and hit2:
-      pass
+      score += 1
+      game_loop()
       
       
       
