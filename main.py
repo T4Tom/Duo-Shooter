@@ -7,14 +7,6 @@ score = 0
 shot1 = False
 shot2 = False
 
-mine1y = random.randint(0, 300)
-mine1x = random.randint(0, 750)
-mine2y = random.randint(0, 300)
-mine2x = random.randint(0, 750)
-
-minelocation1 = [mine1x, mine1y]
-minelocation2 = [mine2x, mine2y]
-
 pointsfont = pygame.font.SysFont(None, 72)
 
 shipimg1 = pygame.image.load('Ship1.png')
@@ -27,10 +19,6 @@ mineimg2 = pygame.image.load('mine2.png')
 mineimg2 = pygame.transform.scale(mineimg2, (50, 50))
 explosionimg = pygame.image.load('explosion.png')
 explosionimg = pygame.transform.scale(explosionimg, (70, 70))
-explosionimgRect = explosionimg.get_rect()
-explosionimgRect.center = (minelocation1[0] + 25, minelocation1[1] + 25)
-explosionimgRect2 = explosionimg.get_rect()
-explosionimgRect2.center = (minelocation2[0] + 25, minelocation2[1] + 25)
 
 
 def game_over():
@@ -62,7 +50,10 @@ def game_loop():
   minelocation1 = [mine1x, mine1y]
   minelocation2 = [mine2x, mine2y]
   
-  
+  explosionimgRect = explosionimg.get_rect()
+  explosionimgRect.center = (minelocation1[0] + 25, minelocation1[1] + 25)
+  explosionimgRect2 = explosionimg.get_rect()
+  explosionimgRect2.center = (minelocation2[0] + 25, minelocation2[1] + 25)  
   
   
   
