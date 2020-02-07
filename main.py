@@ -7,6 +7,8 @@ score = 0
 shot1 = False
 shot2 = False
 
+pointsfont = pygame.font.SysFont(None, 72)
+
 deathfont = pygame.font.SysFont(None, 100)
 deathtext = deathfont.render('GAME OVER', True, (255, 0, 0))
 deathtextRect = deathtext.get_rect()
