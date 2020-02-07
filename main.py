@@ -77,10 +77,6 @@ def game_loop():
     
     screen.fill((0, 0, 0))
     
-    pointstext = pointsfont.render('Points: {0}'.format(score), True, (255, 255, 255))
-    pointstextRect = pointstext.get_rect()
-    pointstextRect.center = (400, 50)
-    screen.blit(pointstext, pointstextRect)
     
     ship1_rect = pygame.Rect(shiplocation1[0], shiplocation1[1], shipimg1.get_width(), shipimg1.get_height())
     ship2_rect = pygame.Rect(shiplocation2[0], shiplocation2[1], shipimg2.get_width(), shipimg2.get_height())
@@ -164,7 +160,13 @@ def game_loop():
       shiplocation2[0] -= 3
 
     screen.blit(shipimg1, shiplocation1)
-    screen.blit(shipimg2, shiplocation2)         
+    screen.blit(shipimg2, shiplocation2)      
+    
+    
+    pointstext = pointsfont.render('Points: {0}'.format(score), True, (255, 255, 255))
+    pointstextRect = pointstext.get_rect()
+    pointstextRect.center = (400, 50)
+    screen.blit(pointstext, pointstextRect)    
       
       
 
