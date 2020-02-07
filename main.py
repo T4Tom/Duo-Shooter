@@ -29,7 +29,7 @@ explosionimg = pygame.transform.scale(explosionimg, (100, 100))
 
 
 def game_over():
-  screen.blit(pointstext, pointstextRect)
+  screen.blit(deathtext, deathtextRect)
   pygame.display.flip()
   time.sleep(2)
   game_loop()
