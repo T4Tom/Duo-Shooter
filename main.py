@@ -7,6 +7,9 @@ score = 0
 shot1 = False
 shot2 = False
 
+shiplocation1 = [450, 400]
+shiplocation2 = [250, 400]
+
 pointsfont = pygame.font.SysFont(None, 72)
 
 deathfont = pygame.font.SysFont(None, 100)
