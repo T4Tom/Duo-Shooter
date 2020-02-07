@@ -26,6 +26,7 @@ explosionimgRect2.center = (minelocation2[0] + 25, minelocation2[1] + 25)
 
 
 def game_over():
+  pass
   
 
 
