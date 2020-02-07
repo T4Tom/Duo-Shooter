@@ -18,8 +18,15 @@ mineimg1 = pygame.transform.scale(mineimg1, (50, 50))
 mineimg2 = pygame.image.load('mine2.png')
 mineimg2 = pygame.transform.scale(mineimg2, (50, 50))
 explosionimg = pygame.image.load('explosion.png')
+explosionimg = pygame.transform.scale(explosionimg, (70, 70))
+explosionimgRect = explosionimg.get_rect()
+explosionimgRect.center = (minelocation1[0] + 25, minelocation1[1] + 25)
+explosionimgRect2 = explosionimg.get_rect()
+explosionimgRect2.center = (minelocation2[0] + 25, minelocation2[1] + 25)
 
 
+def game_over():
+  
 
 
 def game_loop():
@@ -89,9 +96,11 @@ def game_loop():
     
     if hit1:
       shot1 = False
+      screen.blit(explosionimg, explosionimgRect)
     
     if hit2:
       shot2 = False
+      screen.blit(explosionimg, explosinoimgRect2)
       
       
     if hit1 and hit2:
@@ -107,7 +116,7 @@ def game_loop():
       lasery -= 5
       pygame.draw.rect(screen, (150, 0, 0), pygame.Rect(laserx, lasery, 5, 40))
       if lasery < -100:
-        shot1 = False
+        game_over()
     
     if not shot2:
       laserx2 = shiplocation2[0] + 48
@@ -118,7 +127,7 @@ def game_loop():
       lasery2 -= 5
       pygame.draw.rect(screen, (178, 102, 255), pygame.Rect(laserx2, lasery2, 5, 40))
       if lasery2 < -100:
-        shot2 = False      
+        game_over()
       
         
         
