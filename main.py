@@ -109,7 +109,7 @@ def game_loop():
     
     if hit2:
       shot2 = False
-      screen.blit(explosionimg, explosinoimgRect2)
+      screen.blit(explosionimg, explosionimgRect2)
       
       
     if hit1 and hit2:
