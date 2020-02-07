@@ -18,7 +18,7 @@ mineimg1 = pygame.transform.scale(mineimg1, (50, 50))
 mineimg2 = pygame.image.load('mine2.png')
 mineimg2 = pygame.transform.scale(mineimg2, (50, 50))
 explosionimg = pygame.image.load('explosion.png')
-explosionimg = pygame.transform.scale(explosionimg, (70, 70))
+explosionimg = pygame.transform.scale(explosionimg, (100, 100))
 
 
 def game_over():
