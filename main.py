@@ -7,14 +7,6 @@ score = 0
 shot1 = False
 shot2 = False
 
-shiplocation1 = [450, 400]
-shiplocation2 = [250, 400]
-
-pointsfont = pygame.font.SysFont(None, 72)
-pointstext = pointsfont.render('Points: {0}'.format(score), True, (255, 255, 255))
-pointstextRect = pointstext.get_rect()
-pointstextRect.center = (400, 50)
-
 deathfont = pygame.font.SysFont(None, 100)
 deathtext = deathfont.render('GAME OVER', True, (255, 0, 0))
 deathtextRect = deathtext.get_rect()
@@ -35,9 +27,6 @@ explosionimg = pygame.transform.scale(explosionimg, (100, 100))
 
 
 def game_over():
-  screen.blit(deathtext, deathtextRect)
-  screen.blit(shipimg1, shiplocation1)
-  screen.blit(shipimg2, shiplocation2)
   screen.blit(pointstext, pointstextRect)
   pygame.display.flip()
   time.sleep(2)
