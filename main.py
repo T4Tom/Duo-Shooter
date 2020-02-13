@@ -3,6 +3,8 @@ pygame.init()
 screen = pygame.display.set_mode((800, 600))
 clock = pygame.time.Clock()
 
+pygame.screen.set_caption("Duo Shooter")
+
 score = 0
 shot1 = False
 shot2 = False
@@ -33,6 +35,7 @@ def game_over():
   screen.blit(deathtext, deathtextRect)
   pygame.display.flip()
   time.sleep(2)
+  score = 0
   game_loop()
   
 
