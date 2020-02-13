@@ -3,7 +3,7 @@ pygame.init()
 screen = pygame.display.set_mode((800, 600))
 clock = pygame.time.Clock()
 
-pygame.screen.set_caption("Duo Shooter")
+screen.set_caption("Duo Shooter")
 
 score = 0
 shot1 = False
