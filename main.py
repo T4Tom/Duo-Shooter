@@ -169,7 +169,7 @@ def game_loop():
     screen.blit(pointstext, pointstextRect)    
      
       
-    screen.blit(tomsign, (0, 0)
+    screen.blit(tomsign, (0, 0))
       
 
     pygame.display.flip()
