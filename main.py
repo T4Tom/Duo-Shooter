@@ -28,6 +28,8 @@ mineimg2 = pygame.image.load('mine2.png')
 mineimg2 = pygame.transform.scale(mineimg2, (50, 50))
 explosionimg = pygame.image.load('explosion.png')
 explosionimg = pygame.transform.scale(explosionimg, (100, 100))
+tomsign = pygame.image.load('tomsign.xcf')
+tomsign = pygame.transform.scale(tomsign, (200, 200))
 
 
 def game_over():
@@ -165,7 +167,9 @@ def game_loop():
     pointstextRect = pointstext.get_rect()
     pointstextRect.center = (400, 50)
     screen.blit(pointstext, pointstextRect)    
+     
       
+    screen.blit(tomsign, (0, 0)
       
 
     pygame.display.flip()
