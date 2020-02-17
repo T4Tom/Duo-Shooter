@@ -93,6 +93,8 @@ def game_loop():
       if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
         shot1 = True
         shot2 = True
+      if event.type == pygame.KEYDOWN and event.key == pygame.K_RETURN:
+        game_loop()
         
         
       
