@@ -7,6 +7,7 @@ pygame.display.set_caption("Duo Shooter")
 
 score = 0
 level = 1
+gainedpoints = 100
 shot1 = False
 shot2 = False
 
@@ -44,6 +45,8 @@ def game_over():
 def game_loop():
         
     level = 1
+    gainedpoints = 100
+    score = 0
     shot1 = False
     shot2 = False
     hit1 = False
@@ -131,6 +134,8 @@ def game_loop():
             hit1 = False
             hit2 = False
             level += 1
+            score += gainedpoints
+            gainedpoints += 100
             
             
             
@@ -177,12 +182,12 @@ def game_loop():
         
         pointstext = normalfont.render('Points: {0}'.format(score), True, (255, 255, 255))
         pointstextRect = pointstext.get_rect()
-        pointstextRect.center = (700, 50)
+        pointstextRect.center = (600, 50)
         screen.blit(pointstext, pointstextRect)        
         
         leveltext = normalfont.render('Level: {0}'.format(level), True, (255, 255, 255))
         leveltextRect = leveltext.get_rect()
-        leveltextRect.center = (100, 50)
+        leveltextRect.center = (200, 50)
         screen.blit(leveltext, leveltextRect)
             
             
@@ -195,4 +200,5 @@ game_loop()
 
 # Ship 1 = red, right
 # Ship 2 = purple, left
+
 
