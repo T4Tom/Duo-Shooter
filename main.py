@@ -65,13 +65,8 @@ def game_loop():
     mine2y = random.randint(0, 300)
     mine2x = random.randint(0, 750)
     
-    minelocation1 = [mine1x, mine1y]
-    minelocation2 = [mine2x, mine2y]
     
-    explosionimgRect = explosionimg.get_rect()
-    explosionimgRect.center = (minelocation1[0] + 25, minelocation1[1] + 25)
-    explosionimgRect2 = explosionimg.get_rect()
-    explosionimgRect2.center = (minelocation2[0] + 25, minelocation2[1] + 25)    
+
     
     
     
@@ -79,12 +74,21 @@ def game_loop():
     while not done:
         
         screen.fill((0, 0, 0))
+
+        minelocation1 = [mine1x, mine1y]
+        minelocation2 = [mine2x, mine2y]
         
         
         ship1_rect = pygame.Rect(shiplocation1[0], shiplocation1[1], shipimg1.get_width(), shipimg1.get_height())
         ship2_rect = pygame.Rect(shiplocation2[0], shiplocation2[1], shipimg2.get_width(), shipimg2.get_height())
         mine1_rect = pygame.Rect(minelocation1[0], minelocation1[1], mineimg1.get_width(), mineimg1.get_height())
         mine2_rect = pygame.Rect(minelocation2[0], minelocation2[1], mineimg2.get_width(), mineimg2.get_height())
+
+        explosionimgRect = explosionimg.get_rect()
+        explosionimgRect.center = (minelocation1[0] + 25, minelocation1[1] + 25)
+        explosionimgRect2 = explosionimg.get_rect()
+        explosionimgRect2.center = (minelocation2[0] + 25, minelocation2[1] + 25)
+
 
         laser1_rect = pygame.Rect(laserx, lasery, 5, 40)
         laser2_rect = pygame.Rect(laserx2, lasery2, 5, 40)        
@@ -131,6 +135,10 @@ def game_loop():
             screen.blit(pointstext, pointstextRect)
             pygame.display.flip()
             time.sleep(0.2)
+            mine1y = random.randint(0, 300)
+            mine1x = random.randint(0, 750)
+            mine2y = random.randint(0, 300)
+            mine2x = random.randint(0, 750)
             hit1 = False
             hit2 = False
             level += 1
@@ -200,5 +208,3 @@ game_loop()
 
 # Ship 1 = red, right
 # Ship 2 = purple, left
-
-
