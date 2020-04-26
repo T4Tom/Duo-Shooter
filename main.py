@@ -208,3 +208,6 @@ game_loop()
 
 # Ship 1 = red, right
 # Ship 2 = purple, left
+
+
+
