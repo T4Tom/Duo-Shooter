@@ -32,12 +32,15 @@ explosionimg = pygame.image.load('explosion.png')
 explosionimg = pygame.transform.scale(explosionimg, (100, 100))
 
 
+start_ticks = pygame.time.get_ticks() # 'import' the timer
+
+
 def game_over():
+    seconds = 0
     screen.fill((0, 0, 0))
     screen.blit(deathtext, deathtextRect)
     pygame.display.flip()
     time.sleep(2)
-    score = 0
     game_loop()
     
 
@@ -74,6 +77,17 @@ def game_loop():
     while not done:
         
         screen.fill((0, 0, 0))
+        
+
+
+        seconds = (pygame.time.get_ticks()-start_ticks)/1000 # initiates the counter
+        if seconds > 5: # if the seconds count up to 10
+            second = 0
+            game_over()
+            game_loop()
+        print(seconds)
+        
+        
 
         minelocation1 = [mine1x, mine1y]
         minelocation2 = [mine2x, mine2y]
@@ -144,6 +158,7 @@ def game_loop():
             level += 1
             score += gainedpoints
             gainedpoints += 100
+            seconds = 0
             
             
             
@@ -152,7 +167,7 @@ def game_loop():
             lasery = 480
                 
         elif shot1:
-            lasery -= 5
+            lasery -= 10
             pygame.draw.rect(screen, (150, 0, 0), pygame.Rect(laserx, lasery, 5, 40))
             if lasery < -100:
                 game_over()
@@ -163,7 +178,7 @@ def game_loop():
 
         
         elif shot2:
-            lasery2 -= 5
+            lasery2 -= 10
             pygame.draw.rect(screen, (178, 102, 255), pygame.Rect(laserx2, lasery2, 5, 40))
             if lasery2 < -100:
                 game_over()
@@ -175,14 +190,14 @@ def game_loop():
                 
         pressed = pygame.key.get_pressed()
         if pressed[pygame.K_RIGHT] and shiplocation1[0] + 100 <= 800:
-            shiplocation1[0] += 3
+            shiplocation1[0] += 6
         if pressed[pygame.K_LEFT] and shiplocation1[0] >= 0:
-            shiplocation1[0] -= 3
+            shiplocation1[0] -= 6
             
         if pressed[pygame.K_d] and shiplocation2[0] + 100 <= 800:
-            shiplocation2[0] += 3
+            shiplocation2[0] += 6
         if pressed[pygame.K_a] and shiplocation2[0] >= 0:
-            shiplocation2[0] -= 3
+            shiplocation2[0] -= 6
 
         screen.blit(shipimg1, shiplocation1)
         screen.blit(shipimg2, shiplocation2)            
